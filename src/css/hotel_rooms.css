@@ -1,0 +1,204 @@
+* {
+    /* border: 1px solid black; */
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    margin: 0;
+}
+
+.hotel_rooms {
+    width: 100%;
+    img {
+        width: 100%;
+    }
+    a {
+        text-decoration: none;
+    }
+    h2 {
+        text-align: center;
+    }
+    .hotel_rooms_card_container {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+        .hotel_rooms_card_content {
+            h3 {
+                text-align: left;
+            }
+
+            p {
+                text-align: left;
+            }
+
+            .hotel_rooms_card_content_button {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+
+                .readmore {
+                    width: 85%;
+
+                }
+
+                .book {
+                    width:15%;
+                    padding: 0.5rem;
+                    text-align: center;
+                    font-size: 1.2rem;
+                }
+            }
+        }
+    }
+}
+
+.hotel_rooms_standard {
+    h1 {
+        text-align: center;
+        text-transform: uppercase;
+    }
+
+    article {
+        border: 1px solid #e1e1e1;
+        margin: 0 4%;
+        padding: 4%;
+        display: flex;
+        flex-direction: row;
+
+        .image {
+            width: 67%;
+
+            img {
+                width: 100%;
+            }
+
+            .image_large {
+                padding: 2%;
+            }
+            
+            .navigationbar {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+
+                .image_small_container {
+                    width: 50%;
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    gap: 10px;
+                    overflow-x: auto;
+                    scroll-behavior: smooth;
+                    scrollbar-width: none; /* Firefox */
+                    -ms-overflow-style: none; /* IE and Edge */
+                    &::-webkit-scrollbar {
+                        display: none; /* Chrome, Safari, Opera */
+                    }
+                    .image_small {
+                        flex: 0 0 auto;
+                    }
+                    img {
+                        width: 100px;
+                        object-fit: cover;
+                        cursor: pointer;
+                    }
+                }
+
+                .button_container_left{
+                    width: 25%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: right;
+                    
+                    .button_left {
+                        padding: 10px 20px;
+                        font-size: 3rem;
+                        cursor: pointer;
+                        background: none;
+                        border: none;
+                        border-radius: 5px;
+                        transition: background-color 0.3s;
+                    }
+
+                    .button_left:hover {
+                        color: #906ffc;
+                    }
+                }
+
+                .button_container_right{
+                    width: 25%;
+                    display: flex;
+                    align-items: center;
+                    
+                    .button_right {
+                        padding: 10px 20px;
+                        font-size: 3rem;
+                        cursor: pointer;
+                        background: none;
+                        border: none;
+                        border-radius: 5px;
+                        transition: background-color 0.3s;
+                    }
+
+                    .button_right:hover {
+                        color: #906ffc;
+                    }
+                }
+            }
+        }
+        .info {
+            width: 33%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            .booknow {
+                background: #073a8f;
+                padding: 4%;
+                text-align: center;
+                
+                a {
+                    font-size: 2.5rem;
+                    text-transform: uppercase;
+                    color: white;
+                }
+            }
+        }
+
+    }
+
+    section {
+        margin: 0 4%;
+        padding: 4%;
+
+        h2 {
+            text-align: center;
+            text-transform: uppercase;
+        }
+
+        summary {
+            display: flex;
+            flex-direction: row;
+
+            aside {
+                width: 50%;
+            }
+        }
+
+
+    }
+}
