@@ -136,7 +136,6 @@ export const contact_us_minibus_table_data = [
     },
 ]
 
-
 export const contact_us_carpark_table_data = [
     {
         id: "1",
@@ -147,6 +146,44 @@ export const contact_us_carpark_table_data = [
         id: "2",
         days: "Sat - Sun",
         fee: "$70/hr",
+    },
+]
+
+export const job_vacancies = [
+    {
+        id: '1',
+        post_date: 'Shopping List',
+        job_title: 'Shopping List',
+        department: 'TASK',
+        job_type: 'TASK',
+    },
+        {
+        id: '2',
+        post_date: 'Shopping List',
+        job_title: 'Shopping List',
+        department: 'D',
+        job_type: 'TASK',
+    },
+        {
+        id: '3',
+        post_date: 'buying order',
+        job_title: 'Shopping List',
+        department: 'A',
+        job_type: 'TASK',
+    },
+        {
+        id: '4',
+        post_date: 'hello world',
+        job_title: 'Shopping List',
+        department: 'B',
+        job_type: 'TASK',
+    },
+        {
+        id: '5',
+        post_date: 'last item',
+        job_title: 'Shopping List',
+        department: 'C',
+        job_type: 'TASK',
     },
 ]
 
