@@ -40,3 +40,113 @@ export const hotel_rooms = [
         beds: "1 king bed",
     },
 ]
+
+export const contact_us_contact_info_table_data = [
+    {
+        id: "1",
+        subject: "general",
+        email: "a111@gmail.com",
+    },
+        {
+        id: "2",
+        subject: "hotel",
+        email: "a222@gmail.com",
+    },
+        {
+        id: "3",
+        subject: "restaurant",
+        email: "a333@gmail.com",
+    },
+        {
+        id: "4",
+        subject: "online shop",
+        email: "a444@gmail.com",
+    },
+]   
+
+export const contact_us_bus_table_data_hki = [
+    {
+        id: "1",
+        company: "AAA",
+        number: "101",
+        route: "QQ to WW",
+    },
+        {
+        id: "2",
+        company: "BBB",
+        number: "670",
+        route: "RR to TT",
+    },
+]
+
+export const contact_us_bus_table_data_kt = [
+    {
+        id: "1",
+        company: "AAA",
+        number: "150",
+        route: "gg to hh",
+    },
+        {
+        id: "2",
+        company: "BBB",
+        number: "555",
+        route: "UU to BB",
+    },
+]
+
+export const contact_us_bus_table_data_nt = [
+    {
+        id: "1",
+        company: "AAA",
+        number: "400",
+        route: "gg to hh",
+    },
+        {
+        id: "2",
+        company: "BBB",
+        number: "600",
+        route: "UU to BB",
+    },
+]
+
+export const contact_us_minibus_table_data = [
+    {
+        id: "1",
+        company: "AAA",
+        number: "400",
+        route: "gg to hh",
+    },
+        {
+        id: "2",
+        company: "BBB",
+        number: "600",
+        route: "UU to BB",
+    },
+            {
+        id: "3",
+        company: "CCC",
+        number: "800",
+        route: "UU to BB",
+    },
+            {
+        id: "4",
+        company: "DDD",
+        number: "1000",
+        route: "UU to BB",
+    },
+]
+
+
+export const contact_us_carpark_table_data = [
+    {
+        id: "1",
+        days: "Mon - Fri",
+        fee: "$50/hr",
+    },
+    {
+        id: "2",
+        days: "Sat - Sun",
+        fee: "$70/hr",
+    },
+]
+
