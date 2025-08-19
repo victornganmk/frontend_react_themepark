@@ -1,6 +1,9 @@
 import React, { useState, useRef } from 'react'
+import { hotel_rooms } from '../../data';
 
 const Hotel_Rooms_Standard = () => {
+    const room = hotel_rooms.find(room => room.id === 1);
+
     // State to manage the current large image and selected thumbnail index
     const [currentImage, setCurrentImage] = useState('/img/hotel_rooms/hotel_rooms_001.jpg');
     const [currentIndex, setCurrentIndex] = useState(0);
@@ -75,7 +78,7 @@ const Hotel_Rooms_Standard = () => {
             </div>
 
             <div className="hotel_rooms_standard">
-                <h1>standard oceanfront room</h1>
+                <h1>{room.type}</h1>
                 <article>
                     <div className="image">
                         <div className="image_large">
@@ -108,7 +111,7 @@ const Hotel_Rooms_Standard = () => {
                         <div className="text">
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero a consequatur dolores ratione explicabo nobis nemo adipisci architecto ipsam sunt!</p>
                             <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nulla, delectus alias aliquam voluptates reiciendis ad quasi architecto molestias assumenda facere?</p>
-                            <p></p>
+                            <p> {room.size_sqf} sqf | {room.size_sqm} sqm | {room.view} | {room.beds} </p>
                             <p></p>
                         </div>
                         <div className="booknow">
@@ -121,20 +124,20 @@ const Hotel_Rooms_Standard = () => {
                     <summary>
                         <aside>
                             <ul>
-                                <li>Lorem ipsum dolor sit amet.</li>
-                                <li>Lorem ipsum dolor sit amet.</li>
-                                <li>Lorem ipsum dolor sit amet.</li>
-                                <li>Lorem ipsum dolor sit amet.</li>
-                                <li>Lorem ipsum dolor sit amet.</li>
+                                <li>{room.list1}</li>
+                                <li>{room.list2}</li>
+                                <li>{room.list3}</li>
+                                <li>{room.list4}</li>
+                                <li>{room.list5}</li>
                             </ul>
                         </aside>
                         <aside>
                             <ul>
-                                <li>Lorem ipsum dolor sit amet.</li>
-                                <li>Lorem ipsum dolor sit amet.</li>
-                                <li>Lorem ipsum dolor sit amet.</li>
-                                <li>Lorem ipsum dolor sit amet.</li>
-                                <li>Lorem ipsum dolor sit amet.</li>
+                                <li>{room.list6}</li>
+                                <li>{room.list7}</li>
+                                <li>{room.list8}</li>
+                                <li>{room.list9}</li>
+                                <li>{room.list10}</li>
                             </ul>
                         </aside>
                     </summary>

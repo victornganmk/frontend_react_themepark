@@ -18,7 +18,7 @@ const Hotel_Booking = () => {
         <div className="hotel_booking">
             <h1>booking</h1>
             <div className="form_container">
-                            <HotelBookingForm rooms={rooms} onSubmit={handleSubmit} />
+                <HotelBookingForm rooms={rooms} onSubmit={handleSubmit} />
             </div>
         </div>
     );

@@ -1,10 +1,18 @@
 * {
-    /* border: 1px solid black; */
+    border: 1px solid palegreen;
 }
 
 html, body {
     margin: 0;
     padding: 0;
+    font-family: 'Exo 2', -apple-system, BlinkMacSystemFont, sans-serif;
+    background-color: var(--bg-dark);
+    color: var(--text-primary);
+    overflow-x: hidden;
+    position: relative;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 body {
@@ -20,7 +28,8 @@ ul {
 }
 
 .hotel_rooms {
-    width: 100%;
+    width: 80%;
+    margin: 0 auto;
     img {
         width: 100%;
     }
@@ -29,113 +38,82 @@ ul {
     }
     h2 {
         text-align: center;
+        text-transform: uppercase;
+        color: var(--primary);
     }
     .hotel_rooms_card_container {
         width: 100%;
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        gap: 2rem;
-        .hotel_rooms_card_content {
-            h3 {
-                text-align: left;
-            }
+        gap: 20px;
+        border: 1px solid grey;
+        border-radius: 20px;
+        padding: 20px;
+        margin: 30px auto;
 
-            p {
-                text-align: left;
-            }
-
-            .hotel_rooms_card_content_button {
-                display: flex;
-                flex-direction: row;
-                justify-content: space-between;
-                align-items: center;
-
-                .readmore {
-                    width: 85%;
-
+        .hotel_rooms_card {
+            border: 1px solid grey;
+            border-radius: 20px;
+            padding: 20px;
+            margin: 0 auto;
+            .hotel_rooms_card_content {
+                h3 {
+                    text-align: left;
+                    text-transform: capitalize;
                 }
 
-                .book {
-                    width:15%;
-                    padding: 0.5rem;
-                    text-align: center;
-                    font-size: 1.2rem;
+                p {
+                    text-align: left;
+                }
+
+                .hotel_rooms_card_content_button {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    align-items: center;
+
+                    .readmore {
+                        width: 75%;
+                        text-transform: uppercase;
+                        text-align: left;
+                        a {
+                            padding: 10px;
+                            border: 1px solid grey;
+                            border-radius: 5px;
+                        }
+                        
+
+                    }
+
+                    .book {
+                        width:25%;
+                        padding: 0.5rem;
+                        text-align: right;
+                        font-size: 1rem;
+                        text-transform: uppercase;
+                        a {
+                            padding: 10px;
+                            border: 1px solid grey;
+                            border-radius: 5px;
+                        }
+
+                    }
                 }
             }
         }
     }
+        
 }
 
-.hotel_dining {
-    width: 100%;
-    img {
-        width: 100%;
-    }
-
-    h2 {
-        text-align: center;
-    }
-    .hotel_dining_card_container {
-        width: 100%;
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 2rem;
-
-        .hotel_dining_card_content {
-            h3 {
-                text-align: left;
-            }
-
-            p {
-                text-align: left;
-            }
-
-            ul {
-                padding-left: 15px;
-            }
-        }
-    }
-}
-
-.hotel_facilities {
-    width: 100%;
-    img {
-        width: 100%;
-    }
-
-    h2 {
-        text-align: center;
-    }
-    .hotel_facilities_card_container {
-        width: 100%;
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 2rem;
-
-        .hotel_facilities_card_content {
-            h3 {
-                text-align: left;
-            }
-
-            p {
-                text-align: left;
-            }
-
-            ul {
-                padding-left: 15px;
-            }
-        }
-    }
-}
-
-.hotel_rooms_standard {
+.hotel_rooms_standard, .hotel_rooms_deluxe, .hotel_rooms_premier, .hotel_rooms_grand {
     h1 {
         text-align: center;
         text-transform: uppercase;
     }
 
     article {
-        border: 1px solid #e1e1e1;
+        border: 1px solid grey;
+        border-radius: 20px;
         margin: 0 4%;
         padding: 4%;
         display: flex;
@@ -246,22 +224,121 @@ ul {
     section {
         margin: 0 4%;
         padding: 4%;
+        border: 1px solid grey;
+        border-radius: 20px;
 
         h2 {
             text-align: center;
             text-transform: uppercase;
+            margin-top: 0;
         }
 
         summary {
             display: flex;
             flex-direction: row;
+            margin-top: 40px;       
 
             aside {
                 width: 50%;
+                ul {
+                    padding-left: 10px;
+                }
             }
         }
 
 
+    }
+}
+
+.hotel_dining {
+    width: 80%;
+    margin: 0 auto;
+    img {
+        width: 100%;
+    }
+
+    h2 {
+        text-align: center;
+        text-transform: uppercase;
+    }
+
+    .hotel_dining_card_container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        border: 1px solid grey;
+        border-radius: 20px;
+        padding: 20px;
+        margin: 0 auto;
+
+        .hotel_dining_card {
+            border: 1px solid grey;
+            border-radius: 20px;
+            padding: 20px;
+            margin: 0 auto;
+
+            .hotel_dining_card_content {
+                h3 {
+                    text-align: left;
+                }
+
+                p {
+                    text-align: left;
+                }
+
+                ul {
+                    padding-left: 15px;
+                }
+            }
+        }
+
+        
+    }
+}
+
+.hotel_facilities {
+    width: 80%;
+    margin: 0 auto;
+    img {
+        width: 100%;
+    }
+
+    h2 {
+        text-align: center;
+        text-transform: uppercase;
+    }
+    .hotel_facilities_card_container {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        border: 1px solid grey;
+        border-radius: 20px;
+        padding: 20px;
+        margin: 0 auto;
+
+        .hotel_facilities_card {
+            border: 1px solid grey;
+            border-radius: 20px;
+            padding: 20px;
+            margin: 0 auto;
+
+            .hotel_facilities_card_content {
+            h3 {
+                text-align: left;
+            }
+
+            p {
+                text-align: left;
+            }
+
+            ul {
+                padding-left: 15px;
+            }
+            }
+        }
+
+        
     }
 }
 
@@ -272,23 +349,113 @@ ul {
     }
 
     .form_container {
-        width: 100%;
+        width: 80%;
         margin: 0 auto;
+        padding: 20px;
+        border: 1px solid grey;
+        border-radius: 20px;
     }
 }
 
 .contact_us {
+    width: 80%;
+    margin: 0 auto;
+
+    h2 {
+        text-align: center;
+        text-transform: uppercase;
+    }
+
+    h3 {
+        text-align: center;
+        text-transform: uppercase;
+    }
+
+
+    h4 {
+        text-align: left;
+        text-transform: uppercase;
+    }
+
+    .contact_info {
+        border: 1px solid grey;
+        border-radius: 20px;
+        padding: 20px;
+        margin: 30px 0;
+
+        .map_container {
+            width: 100%;
+            margin: 0 auto;
+        }
+    }
+    
+    .public_transportation {
+        border: 1px solid grey;
+        border-radius: 20px;
+        padding: 20px;
+        margin: 30px 0;
+
+        .mtr, .bus, .minibus {
+            border: 1px solid grey;
+            border-radius: 20px;
+            padding: 20px;
+            margin: 30px 0;
+            h4 {
+                margin-top: 0;
+            }
+        }
+    }
+    .carpark {
+        border: 1px solid grey;
+        border-radius: 20px;
+        padding: 20px;
+        margin: 30px 0;
+        h4 {
+            margin-top: 0;
+        }
+    }
+    
+
 
 }
 
 .job_openings {
+    width: 80%;
+    margin: 0 auto;
+
     h1 {
         text-align: center;
         text-transform: capitalize;
     }
     .job_openings_table_container {
         width: 80%;
+        padding: 20px;
         margin: 0 auto;
+        border: 1px solid grey;
+        border-radius: 20px;
+
+        .searchbox {
+            margin: 20px 0;
+            padding: 6px 12px;
+        }
+    }
+    .job_openings_job_details {
+        width: 80%;
+        padding: 20px;
+        margin: 0 auto;
+        border: 1px solid grey;
+        border-radius: 20px;
+        .button_container {
+            margin-top: 30px;
+            display: flex;
+            justify-content: space-between;
+            button {
+                width: 15%;
+                padding: 20px;
+                text-transform: uppercase;
+                font-weight: 700;
+            }
+        }
     }
 }
 

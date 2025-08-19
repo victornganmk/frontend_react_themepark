@@ -14,7 +14,7 @@ const Hotel_Facilities = () => {
                 </ul>
             </div>
             <div class="hotel_facilities">
-                <h2>dining</h2>
+                <h2>facilities</h2>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt doloribus, voluptatum fuga omnis exercitationem labore illum esse ipsa necessitatibus dolorum dolores laudantium perspiciatis recusandae mollitia tempora dolor eius, cumque fugit?</p>
                 <div className="hotel_facilities_card_container">
                     {hotel_facilities.map((hotel_facilities) => (

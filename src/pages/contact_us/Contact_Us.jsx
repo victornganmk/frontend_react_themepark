@@ -40,8 +40,6 @@ const minibus_table_data = { nodes: contact_us_minibus_table_data };
 const carpark_table_data = { nodes: contact_us_carpark_table_data };
 
 const Contact_Us = () => {
-    
-
     const theme = useTheme({
         Table:`
         width: 100%;
@@ -65,15 +63,15 @@ const Contact_Us = () => {
         <div className="contact_us">
             <div className="contact_info">
                 <h2>contact us</h2>
-                <p>Do you have any questions or comments for us? We always enjoy hearing from our guests, please call us at (852) 3923 2323 or send us an email along with your personal information including name and phone number.</p>
+                <p>Do you have any questions or comments for us? We always enjoy hearing from our guests, please call us at (852) 2345 6789 or send us an email along with your personal information including name and phone number.</p>
                 <div className="contact_info_table">
                     <CompactTable columns={contact_info_table_header} data={contact_info_table_data} theme={theme}/>
                 </div>
-                <p>address</p>
+                <p>8/F. WONG TZE BUILDING 71 HOI YUEN ROAD KWUN TONG KOWLOON</p>
                 <div className="map_container">
                     <iframe 
                         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d922.7814258705714!2d114.22442816953183!3d22.31108523943497!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34040145637b41a7%3A0xab827da0184aef07!2z5riv5bCI6KeA5aGY5pWZ5a245Lit5b-D!5e0!3m2!1szh-TW!2shk!4v1755227348732!5m2!1szh-TW!2shk" 
-                        width="600" 
+                        width="100%" 
                         height="450" 
                         style={{border:0}}
                         allowfullscreen="" 
@@ -84,24 +82,24 @@ const Contact_Us = () => {
                 </div>
             </div>
             <div className="public_transportation">
-                <h2>public transportation</h2>
+                <h3>public transportation</h3>
                 <div className="mtr">
-                    <h3>mtr</h3>
+                    <h4>mtr</h4>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis, vel!</p>
                 </div>
                 <div className="bus">
-                    <h3>bus</h3>
+                    <h4>bus</h4>
                     <CompactTable columns={bus_table_header} data={bus_table_data_hki} theme={theme}/>
                     <CompactTable columns={bus_table_header} data={bus_table_data_kt} theme={theme}/>
                     <CompactTable columns={bus_table_header} data={bus_table_data_nt} theme={theme}/>
                 </div>
                 <div className="minibus">
-                    <h3>minibus</h3>
+                    <h4>minibus</h4>
                     <CompactTable columns={minibus_table_header} data={minibus_table_data} theme={theme}/>
                 </div>
             </div>
-            <div className="car_park">
-                <h3>car park</h3>
+            <div className="carpark">
+                <h4>car park</h4>
                 <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odio, ad.</p>
                 <CompactTable columns={carpark_table_header} data={carpark_table_data} theme={theme}/>
             </div>
