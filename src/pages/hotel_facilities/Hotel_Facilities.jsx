@@ -1,8 +1,8 @@
 import React from 'react'
-import Hotel_Room from './components/Hotel_Room';
-import { hotel_rooms } from "/src/data.js"
+import Hotel_Facility from "./components/Hotel_Facility"
+import { hotel_facilities } from "/src/data.js"
 
-const Hotel_Rooms = () => {
+const Hotel_Facilities = () => {
     return (
         <>
             <div className="hotel_subnavbar">
@@ -13,12 +13,12 @@ const Hotel_Rooms = () => {
                     <li><a href="#">booking</a></li>
                 </ul>
             </div>
-            <div class="hotel_rooms">
-                <h2>rooms</h2>
+            <div class="hotel_facilities">
+                <h2>dining</h2>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt doloribus, voluptatum fuga omnis exercitationem labore illum esse ipsa necessitatibus dolorum dolores laudantium perspiciatis recusandae mollitia tempora dolor eius, cumque fugit?</p>
-                <div className="hotel_rooms_card_container">
-                    {hotel_rooms.map((hotel_rooms) => (
-                        <Hotel_Room key={hotel_rooms.id} {... hotel_rooms} />
+                <div className="hotel_facilities_card_container">
+                    {hotel_facilities.map((hotel_facilities) => (
+                        <Hotel_Facility key={hotel_facilities.id} {... hotel_facilities} />
                     ))}
                 </div>
             </div>
@@ -26,4 +26,4 @@ const Hotel_Rooms = () => {
     );
 }
 
-export default Hotel_Rooms
+export default Hotel_Facilities

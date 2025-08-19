@@ -66,6 +66,68 @@ ul {
     }
 }
 
+.hotel_dining {
+    width: 100%;
+    img {
+        width: 100%;
+    }
+
+    h2 {
+        text-align: center;
+    }
+    .hotel_dining_card_container {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+
+        .hotel_dining_card_content {
+            h3 {
+                text-align: left;
+            }
+
+            p {
+                text-align: left;
+            }
+
+            ul {
+                padding-left: 15px;
+            }
+        }
+    }
+}
+
+.hotel_facilities {
+    width: 100%;
+    img {
+        width: 100%;
+    }
+
+    h2 {
+        text-align: center;
+    }
+    .hotel_facilities_card_container {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+
+        .hotel_facilities_card_content {
+            h3 {
+                text-align: left;
+            }
+
+            p {
+                text-align: left;
+            }
+
+            ul {
+                padding-left: 15px;
+            }
+        }
+    }
+}
+
 .hotel_rooms_standard {
     h1 {
         text-align: center;
@@ -203,9 +265,35 @@ ul {
     }
 }
 
+.hotel_booking {
+    h1 {
+        text-align: center;
+        text-transform: capitalize;
+    }
+
+    .form_container {
+        width: 100%;
+        margin: 0 auto;
+    }
+}
+
 .contact_us {
 
 }
+
+.job_openings {
+    h1 {
+        text-align: center;
+        text-transform: capitalize;
+    }
+    .job_openings_table_container {
+        width: 80%;
+        margin: 0 auto;
+    }
+}
+
+
+
 
 
 
