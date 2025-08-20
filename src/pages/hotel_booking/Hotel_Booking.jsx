@@ -3,10 +3,10 @@ import HotelBookingForm from "./components/HotelBookingForm"
 
 const Hotel_Booking = () => {
     const rooms = [
-        { id: 1, name: 'Standard', pricePerNight: 100 },
-        { id: 2, name: 'Deluxe', pricePerNight: 150 },
-        { id: 3, name: 'Premier', pricePerNight: 200 },
-        { id: 4, name: 'Grand', pricePerNight: 250 },
+        { id: 1, name: 'Standard', pricePerNight: 600 },
+        { id: 2, name: 'Deluxe', pricePerNight: 800 },
+        { id: 3, name: 'Premier', pricePerNight: 1000 },
+        { id: 4, name: 'Grand', pricePerNight: 1200 },
     ];
         
     const handleSubmit = (data) => {
@@ -16,10 +16,8 @@ const Hotel_Booking = () => {
 
     return (
         <div className="hotel_booking">
-            <h1>booking</h1>
-            <div className="form_container">
-                <HotelBookingForm rooms={rooms} onSubmit={handleSubmit} />
-            </div>
+            <h1 className='section-title'>booking</h1>
+            <HotelBookingForm rooms={rooms} onSubmit={handleSubmit} />
         </div>
     );
 }

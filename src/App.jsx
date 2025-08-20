@@ -22,7 +22,7 @@ function App() {
       <Hotel_Facilities />
       <Hotel_Booking />
       <Job_Openings />
-      <Contact_Us />  
+      <Contact_Us /> 
     </>
   );
 }

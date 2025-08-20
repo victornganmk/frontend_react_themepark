@@ -7,7 +7,7 @@ const Hotel_Facility = ({name, image, info, list1, list2, list3, list4}) => {
                 <img src={image} alt=""/>
             </div>
             <div className="hotel_facilities_card_content">
-                <h3>{name}</h3>
+                <h2 className='section-subtitle'>{name}</h2>
                 <p>{info}</p>
                 <div className="list_container">
                     <ul>

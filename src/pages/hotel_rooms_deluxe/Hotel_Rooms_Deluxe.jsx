@@ -5,7 +5,7 @@ const Hotel_Rooms_Deluxe = () => {
     const room = hotel_rooms.find(room => room.id === 2);
 
     // State to manage the current large image and selected thumbnail index
-    const [currentImage, setCurrentImage] = useState('/img/hotel_rooms/hotel_rooms_001.jpg');
+    const [currentImage, setCurrentImage] = useState('/img/hotel_rooms/hotel_rooms_002.webp');
     const [currentIndex, setCurrentIndex] = useState(0);
     
     // Ref to control the thumbnail container's scroll position
@@ -13,16 +13,16 @@ const Hotel_Rooms_Deluxe = () => {
 
     // Array of thumbnail images
     const thumbnails = [
-        '/img/hotel_rooms/hotel_rooms_001.jpg',
-        '/img/hotel_rooms/hotel_rooms_002.jpg',
-        '/img/hotel_rooms/hotel_rooms_003.jpg',
-        '/img/hotel_rooms/hotel_rooms_004.jpg',
-        '/img/hotel_rooms/hotel_rooms_005.jpg',
-        '/img/hotel_rooms/hotel_rooms_006.jpg',
-        '/img/hotel_rooms/hotel_rooms_007.jpg',
-        '/img/hotel_rooms/hotel_rooms_008.jpg',
-        '/img/hotel_rooms/hotel_rooms_009.jpg',
-        '/img/hotel_rooms/hotel_rooms_010.jpg',
+        '/img/hotel_rooms/hotel_rooms_001.webp',
+        '/img/hotel_rooms/hotel_rooms_002.webp',
+        '/img/hotel_rooms/hotel_rooms_003.webp',
+        '/img/hotel_rooms/hotel_rooms_004.webp',
+        '/img/hotel_rooms/hotel_rooms_005.webp',
+        '/img/hotel_rooms/hotel_rooms_006.webp',
+        '/img/hotel_rooms/hotel_rooms_007.webp',
+        '/img/hotel_rooms/hotel_rooms_008.webp',
+        '/img/hotel_rooms/hotel_rooms_009.webp',
+        '/img/hotel_rooms/hotel_rooms_010.webp',
     ];
 
     // Handle thumbnail click to update the large image and index
@@ -65,20 +65,8 @@ const Hotel_Rooms_Deluxe = () => {
     };
 
     return (
-        <>
-            <div className="hotel_rooms_subnavbar">
-                <ul>
-                    <li><a href="#">rooms</a></li>
-                    <li><a href="#">dinning</a></li>
-                    <li><a href="#">facilities</a></li>
-                    <li><a href="#">meeting & events</a></li>
-                    <li><a href="#">wedding</a></li>
-                    <li><a href="#">booking</a></li>
-                </ul>
-            </div>
-
             <div className="hotel_rooms_deluxe">
-                <h1>{room.type}</h1>
+                <h1 className='section-title'>{room.type}</h1>
                 <article>
                     <div className="image">
                         <div className="image_large">
@@ -95,7 +83,7 @@ const Hotel_Rooms_Deluxe = () => {
                                             src={thumbnail}
                                             alt={`Thumbnail ${index + 1}`}
                                             style={{
-                                                border: currentImage === thumbnail ? '3px solid #e09ffd' : 'none',
+                                                border: currentImage === thumbnail ? '3px solid #ffff00' : 'none',
                                             }}
                                             onClick={() => handleThumbnailClick(thumbnail, index)}
                                         />
@@ -112,7 +100,6 @@ const Hotel_Rooms_Deluxe = () => {
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero a consequatur dolores ratione explicabo nobis nemo adipisci architecto ipsam sunt!</p>
                             <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nulla, delectus alias aliquam voluptates reiciendis ad quasi architecto molestias assumenda facere?</p>
                             <p> {room.size_sqf} sqf | {room.size_sqm} sqm | {room.view} | {room.beds} </p>
-                            <p></p>
                         </div>
                         <div className="booknow">
                             <a href="#">book now</a>
@@ -120,7 +107,7 @@ const Hotel_Rooms_Deluxe = () => {
                     </div>
                 </article>
                 <section>
-                    <h2>amenities include</h2>
+                    <h2 className='section-subtitle'>amenities include</h2>
                     <summary>
                         <aside>
                             <ul>
@@ -143,7 +130,6 @@ const Hotel_Rooms_Deluxe = () => {
                     </summary>
                 </section>
             </div>
-        </>
     );
 }
 

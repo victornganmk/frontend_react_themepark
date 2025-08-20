@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-export const GuestSelector = ({ onChange }) => {
+const GuestSelector = ({ onChange }) => {
   const [adults, setAdults] = useState(1);
   const [children, setChildren] = useState(0);
 
@@ -17,58 +17,64 @@ export const GuestSelector = ({ onChange }) => {
   };
 
   return (
-    <div className="flex flex-col gap-4">
-      <label>Guests</label>
-      <div className="flex items-center gap-2">
+    <div className="flex flex-col gap-4 guest_selection_container">
+      <div className="flex items-center gap-2 guest_container">
         <span className="w-24">Adults</span>
-        <button
+        <span className="button_container">
+          <button
           type="button"
           onClick={() => updateGuests('adults', -1)}
           className="bg-gray-300 text-black p-1 rounded w-8"
           disabled={adults <= 1}
-        >
-          -
-        </button>
-        <input
-          type="number"
-          value={adults}
-          readOnly
-          className="border p-1 rounded w-12 text-center"
-        />
-        <button
-          type="button"
-          onClick={() => updateGuests('adults', 1)}
-          className="bg-gray-300 text-black p-1 rounded w-8"
-          disabled={adults >= 10} // UI limit
-        >
-          +
-        </button>
+          >
+            -
+          </button>
+          <input
+            type="number"
+            value={adults}
+            readOnly
+            className="border p-1 rounded w-12 text-center adult_quantity"
+          />
+          <button
+            type="button"
+            onClick={() => updateGuests('adults', 1)}
+            className="bg-gray-300 text-black p-1 rounded w-8"
+            disabled={adults >= 10} // UI limit
+          >
+            +
+          </button>
+        </span>
       </div>
-      <div className="flex items-center gap-2">
+      <div className="flex items-center gap-2 guest_container">
         <span className="w-24">Children</span>
-        <button
+        <span className="button_container">
+          <button
           type="button"
           onClick={() => updateGuests('children', -1)}
           className="bg-gray-300 text-black p-1 rounded w-8"
           disabled={children <= 0}
-        >
-          -
-        </button>
-        <input
-          type="number"
-          value={children}
-          readOnly
-          className="border p-1 rounded w-12 text-center"
-        />
-        <button
-          type="button"
-          onClick={() => updateGuests('children', 1)}
-          className="bg-gray-300 text-black p-1 rounded w-8"
-          disabled={children >= 10} // UI limit
-        >
-          +
-        </button>
+          >
+            -
+          </button>
+          <input
+            type="number"
+            value={children}
+            readOnly
+            className="border p-1 rounded w-12 text-center children_quantity"
+          />
+          <button
+            type="button"
+            onClick={() => updateGuests('children', 1)}
+            className="bg-gray-300 text-black p-1 rounded w-8"
+            disabled={children >= 10} // UI limit
+          >
+            +
+          </button>
+        </span>
+
       </div>
     </div>
   );
 };
+
+export default GuestSelector

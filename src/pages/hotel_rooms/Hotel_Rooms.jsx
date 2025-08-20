@@ -4,17 +4,8 @@ import { hotel_rooms } from "/src/data.js"
 
 const Hotel_Rooms = () => {
     return (
-        <>
-            <div className="hotel_subnavbar">
-                <ul>
-                    <li><a href="#">rooms</a></li>
-                    <li><a href="#">dinning</a></li>
-                    <li><a href="#">facilities</a></li>
-                    <li><a href="#">booking</a></li>
-                </ul>
-            </div>
-            <div class="hotel_rooms">
-                <h2>rooms</h2>
+            <div className="hotel_rooms">
+                <h1 className='section-title'>rooms</h1>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt doloribus, voluptatum fuga omnis exercitationem labore illum esse ipsa necessitatibus dolorum dolores laudantium perspiciatis recusandae mollitia tempora dolor eius, cumque fugit?</p>
                 <div className="hotel_rooms_card_container">
                     {hotel_rooms.map((hotel_rooms) => (
@@ -22,7 +13,6 @@ const Hotel_Rooms = () => {
                     ))}
                 </div>
             </div>
-        </>
     );
 }
 

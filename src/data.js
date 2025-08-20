@@ -2,11 +2,11 @@ export const hotel_rooms = [
     {
         id: 1,
         link: "#",
-        image: "/img/hotel_rooms/hotel_rooms_001.jpg", 
+        image: "/img/hotel_rooms/hotel_rooms_001.webp", 
         type: "standard room", 
         size_sqf: "2160", 
         size_sqm: "200", 
-        view: "cyber city view", 
+        view: "cyberpunk city view", 
         beds: "1 queen bed",
         list1: "In-room safe deposit box",
         list2: "Laundry and dry-cleaning services",
@@ -22,11 +22,11 @@ export const hotel_rooms = [
         {
         id: 2,
         link: "#",
-        image: "/img/hotel_rooms/hotel_rooms_002.jpg", 
+        image: "/img/hotel_rooms/hotel_rooms_002.webp", 
         type: "deluxe room", 
         size_sqf: "2700", 
         size_sqm: "250", 
-        view: "cyber city view", 
+        view: "cyberpunk city view", 
         beds: "1 king bed",
         list1: "In-room safe deposit box",
         list2: "Laundry and dry-cleaning services",
@@ -42,11 +42,11 @@ export const hotel_rooms = [
         {
         id: 3,
         link: "#",
-        image: "/img/hotel_rooms/hotel_rooms_003.jpg", 
+        image: "/img/hotel_rooms/hotel_rooms_003.webp", 
         type: "premier room", 
         size_sqf: "3240", 
         size_sqm: "300", 
-        view: "cyber city view", 
+        view: "cyberpunk city view", 
         beds: "1 king bed & 1 queen bed",
         list1: "In-room safe deposit box",
         list2: "Laundry and dry-cleaning services",
@@ -62,11 +62,11 @@ export const hotel_rooms = [
         {
         id: 4,
         link: "#",
-        image: "/img/hotel_rooms/hotel_rooms_001.jpg", 
+        image: "/img/hotel_rooms/hotel_rooms_001.webp", 
         type: "grand room", 
         size_sqf: "4320", 
         size_sqm: "400", 
-        view: "cyber city view", 
+        view: "cyberpunk city view", 
         beds: "2 king beds",
         list1: "In-room safe deposit box",
         list2: "Laundry and dry-cleaning services",
@@ -85,7 +85,7 @@ export const hotel_dining = [
     {
         id: "1",
         name: "Restaurant A",
-        image: "/img/hotel_dining/hotel_dining_restaurant01.jpg",
+        image: "/img/hotel_dining/hotel_dining_restaurant01.webp",
         info: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium ea debitis dolorem ut doloremque, nobis eius! Ullam minima amet quam autem praesentium nobis? Neque, iste? Aliquam necessitatibus fugit porro ducimus.",
         list1: "aaaaaa",
         list2: "bbbbbb",
@@ -95,7 +95,7 @@ export const hotel_dining = [
     {
         id: "2",
         name: "Restaurant B",
-        image: "/img/hotel_dining/hotel_dining_restaurant02.jpg",
+        image: "/img/hotel_dining/hotel_dining_restaurant02.webp",
         info: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium ea debitis dolorem ut doloremque, nobis eius! Ullam minima amet quam autem praesentium nobis? Neque, iste? Aliquam necessitatibus fugit porro ducimus.",
         list1: "aaaaaa",
         list2: "bbbbbb",
@@ -105,7 +105,7 @@ export const hotel_dining = [
     {
         id: "3",
         name: "Restaurant C",
-        image: "/img/hotel_dining/hotel_dining_restaurant03.jpg",
+        image: "/img/hotel_dining/hotel_dining_restaurant03.webp",
         info: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium ea debitis dolorem ut doloremque, nobis eius! Ullam minima amet quam autem praesentium nobis? Neque, iste? Aliquam necessitatibus fugit porro ducimus.",
         list1: "aaaaaa",
         list2: "bbbbbb",
@@ -115,7 +115,7 @@ export const hotel_dining = [
     {
         id: "4",
         name: "Bar",
-        image: "/img/hotel_dining/hotel_dining_bar01.jpg",
+        image: "/img/hotel_dining/hotel_dining_bar01.webp",
         info: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium ea debitis dolorem ut doloremque, nobis eius! Ullam minima amet quam autem praesentium nobis? Neque, iste? Aliquam necessitatibus fugit porro ducimus.",
         list1: "aaaaaa",
         list2: "bbbbbb",
@@ -128,7 +128,7 @@ export const hotel_facilities = [
     {
         id: "1",
         name: "Swimming Pool",
-        image: "/img/hotel_facilities/hotel_facilities_pool.jpg",
+        image: "/img/hotel_facilities/hotel_facilities_pool.webp",
         info: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium ea debitis dolorem ut doloremque, nobis eius! Ullam minima amet quam autem praesentium nobis? Neque, iste? Aliquam necessitatibus fugit porro ducimus.",
         list1: "aaaaaa",
         list2: "bbbbbb",
@@ -138,7 +138,7 @@ export const hotel_facilities = [
     {
         id: "2",
         name: "GYM",
-        image: "/img/hotel_facilities/hotel_facilities_gym.jpg",
+        image: "/img/hotel_facilities/hotel_facilities_gym.webp",
         info: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium ea debitis dolorem ut doloremque, nobis eius! Ullam minima amet quam autem praesentium nobis? Neque, iste? Aliquam necessitatibus fugit porro ducimus.",
         list1: "aaaaaa",
         list2: "bbbbbb",
@@ -148,7 +148,7 @@ export const hotel_facilities = [
     {
         id: "3",
         name: "SPA",
-        image: "/img/hotel_facilities/hotel_facilities_spa.jpg",
+        image: "/img/hotel_facilities/hotel_facilities_spa.webp",
         info: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium ea debitis dolorem ut doloremque, nobis eius! Ullam minima amet quam autem praesentium nobis? Neque, iste? Aliquam necessitatibus fugit porro ducimus.",
         list1: "aaaaaa",
         list2: "bbbbbb",
@@ -158,7 +158,7 @@ export const hotel_facilities = [
     {
         id: "4",
         name: "Kid's Zone",
-        image: "/img/hotel_facilities/hotel_facilities_kidzone.jpg",
+        image: "/img/hotel_facilities/hotel_facilities_kidzone.webp",
         info: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium ea debitis dolorem ut doloremque, nobis eius! Ullam minima amet quam autem praesentium nobis? Neque, iste? Aliquam necessitatibus fugit porro ducimus.",
         list1: "aaaaaa",
         list2: "bbbbbb",
@@ -170,23 +170,23 @@ export const hotel_facilities = [
 export const contact_us_contact_info_table_data = [
     {
         id: "1",
-        subject: "general",
-        email: "a111@gmail.com",
+        subject: "General",
+        email: "general_cyberpunkhk@gmail.com",
     },
         {
         id: "2",
-        subject: "hotel",
-        email: "a222@gmail.com",
+        subject: "Hotel",
+        email: "hotel_cyberpunkhk@gmail.com",
     },
         {
         id: "3",
-        subject: "restaurant",
-        email: "a333@gmail.com",
+        subject: "Restaurant",
+        email: "restaurant_cyberpunkhk@gmail.com",
     },
         {
         id: "4",
-        subject: "online shop",
-        email: "a444@gmail.com",
+        subject: "Online shop",
+        email: "onlineshop_cyberpunkhk@gmail.com",
     },
 ]   
 
@@ -220,7 +220,7 @@ export const contact_us_bus_table_data_kt = [
     },
 ]
 
-export const contact_us_bus_table_data_nt = [
+export const contact_us_minibus_table_data_nt = [
     {
         id: "1",
         company: "AAA",
@@ -235,7 +235,37 @@ export const contact_us_bus_table_data_nt = [
     },
 ]
 
-export const contact_us_minibus_table_data = [
+export const contact_us_minibus_table_data_hki = [
+    {
+        id: "1",
+        company: "AAA",
+        number: "101",
+        route: "QQ to WW",
+    },
+        {
+        id: "2",
+        company: "BBB",
+        number: "670",
+        route: "RR to TT",
+    },
+]
+
+export const contact_us_minibus_table_data_kt = [
+    {
+        id: "1",
+        company: "AAA",
+        number: "150",
+        route: "gg to hh",
+    },
+        {
+        id: "2",
+        company: "BBB",
+        number: "555",
+        route: "UU to BB",
+    },
+]
+
+export const contact_us_bus_table_data_nt = [
     {
         id: "1",
         company: "AAA",
@@ -246,18 +276,6 @@ export const contact_us_minibus_table_data = [
         id: "2",
         company: "BBB",
         number: "600",
-        route: "UU to BB",
-    },
-            {
-        id: "3",
-        company: "CCC",
-        number: "800",
-        route: "UU to BB",
-    },
-            {
-        id: "4",
-        company: "DDD",
-        number: "1000",
         route: "UU to BB",
     },
 ]

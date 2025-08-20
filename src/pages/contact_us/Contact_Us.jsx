@@ -7,7 +7,9 @@ import {
             contact_us_bus_table_data_kt,
             contact_us_bus_table_data_nt,
             contact_us_carpark_table_data,
-            contact_us_minibus_table_data
+            contact_us_minibus_table_data_hki,
+            contact_us_minibus_table_data_kt,
+            contact_us_minibus_table_data_nt,
         } from '../../data';
 
 const contact_info_table_header = [
@@ -36,7 +38,9 @@ const contact_info_table_data = { nodes: contact_us_contact_info_table_data };
 const bus_table_data_hki = { nodes: contact_us_bus_table_data_hki };
 const bus_table_data_kt = { nodes: contact_us_bus_table_data_kt };
 const bus_table_data_nt = { nodes: contact_us_bus_table_data_nt };
-const minibus_table_data = { nodes: contact_us_minibus_table_data };
+const minibus_table_data_hki = { nodes: contact_us_minibus_table_data_hki };
+const minibus_table_data_kt = { nodes: contact_us_minibus_table_data_kt };
+const minibus_table_data_nt = { nodes: contact_us_minibus_table_data_nt };
 const carpark_table_data = { nodes: contact_us_carpark_table_data };
 
 const Contact_Us = () => {
@@ -44,17 +48,18 @@ const Contact_Us = () => {
         Table:`
         width: 100%;
         margin: 0 auto;
+        color: black;
         `,
         HeaderRow: `
-            background-color: #eaf5fd;
+            background-color: #d2e9fb;
             `,
         Row: `
             &:nth-of-type(odd) {
-            background-color: #d2e9fb;
+            background-color: #bee3f9;
             }
 
             &:nth-of-type(even) {
-            background-color: #eaf5fd;
+            background-color: #d2e9fb;
             }
         `,
         });
@@ -62,7 +67,7 @@ const Contact_Us = () => {
     return (
         <div className="contact_us">
             <div className="contact_info">
-                <h2>contact us</h2>
+                <h1 className='section-title'>contact us</h1>
                 <p>Do you have any questions or comments for us? We always enjoy hearing from our guests, please call us at (852) 2345 6789 or send us an email along with your personal information including name and phone number.</p>
                 <div className="contact_info_table">
                     <CompactTable columns={contact_info_table_header} data={contact_info_table_data} theme={theme}/>
@@ -82,24 +87,32 @@ const Contact_Us = () => {
                 </div>
             </div>
             <div className="public_transportation">
-                <h3>public transportation</h3>
+                <h2 class="section-subtitle">public transportation</h2>
                 <div className="mtr">
-                    <h4>mtr</h4>
+                    <h3>mtr</h3>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis, vel!</p>
                 </div>
                 <div className="bus">
-                    <h4>bus</h4>
+                    <h3>bus</h3>
+                    <h4>Hong Kong Island</h4>
                     <CompactTable columns={bus_table_header} data={bus_table_data_hki} theme={theme}/>
+                    <h4>Kowloon</h4>
                     <CompactTable columns={bus_table_header} data={bus_table_data_kt} theme={theme}/>
+                    <h4>New Territories</h4>
                     <CompactTable columns={bus_table_header} data={bus_table_data_nt} theme={theme}/>
                 </div>
                 <div className="minibus">
-                    <h4>minibus</h4>
-                    <CompactTable columns={minibus_table_header} data={minibus_table_data} theme={theme}/>
+                    <h3>minibus</h3>
+                    <h4>Hong Kong Island</h4>
+                    <CompactTable columns={minibus_table_header} data={minibus_table_data_hki} theme={theme}/>
+                    <h4>Kowloon</h4>
+                    <CompactTable columns={minibus_table_header} data={minibus_table_data_kt} theme={theme}/>
+                    <h4>New Territories</h4>
+                    <CompactTable columns={minibus_table_header} data={minibus_table_data_nt} theme={theme}/>
                 </div>
             </div>
             <div className="carpark">
-                <h4>car park</h4>
+                <h2 class="section-subtitle">car park</h2>
                 <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odio, ad.</p>
                 <CompactTable columns={carpark_table_header} data={carpark_table_data} theme={theme}/>
             </div>

@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import { DateRangePicker } from './DateRangePicker';
-import { GuestSelector } from './GuestSelector';
-import { RoomSelector } from './RoomSelector';
+import DatePicker from 'react-datepicker';
+import 'react-datepicker/dist/react-datepicker.css';
+import DateDisplay from './DateDisplay';
+import RoomSelector from './RoomSelector';
+import GuestSelector from './GuestSelector';
 
 const HotelBookingForm = ({ rooms, onSubmit }) => {
   const [dates, setDates] = useState({ checkIn: null, checkOut: null });
@@ -19,16 +21,10 @@ const HotelBookingForm = ({ rooms, onSubmit }) => {
   const nights = calculateNights();
 
   useEffect(() => {
-    console.log('useEffect triggered:', { dates, guests, selectedRooms });
     if (dates.checkIn && dates.checkOut && selectedRooms.length > 0) {
       const nights = calculateNights();
-      console.log('Nights:', nights);
-      console.log('Selected Rooms:', selectedRooms);
-      console.log('Guests:', guests);
-
       const baseFee = selectedRooms.reduce((sum, room) => {
         const roomCost = room.quantity * room.pricePerNight * nights;
-        console.log(`Room ${room.name}: quantity=${room.quantity}, pricePerNight=${room.pricePerNight}, nights=${nights}, cost=${roomCost}`);
         return sum + roomCost;
       }, 0);
 
@@ -36,13 +32,10 @@ const HotelBookingForm = ({ rooms, onSubmit }) => {
         const adultsInRoom = Math.min(guests.adults, 3 * room.quantity);
         const extraAdults = Math.max(0, adultsInRoom - 2 * room.quantity);
         const extraCost = extraAdults * 0.5 * room.pricePerNight * nights;
-        console.log(`Room ${room.name}: adultsInRoom=${adultsInRoom}, extraAdults=${extraAdults}, extraCost=${extraCost}`);
         return sum + extraCost;
       }, 0);
 
-      const total = baseFee + extraAdultFee;
-      console.log('Base Fee:', baseFee, 'Extra Adult Fee:', extraAdultFee, 'Total Fee:', total);
-      setTotalFee(total);
+      setTotalFee(baseFee + extraAdultFee);
     } else {
       setTotalFee(0);
     }
@@ -52,10 +45,11 @@ const HotelBookingForm = ({ rooms, onSubmit }) => {
     e.preventDefault();
     const totalRooms = selectedRooms.reduce((sum, room) => sum + room.quantity, 0);
     const totalGuests = guests.adults + guests.children;
-    const maxOccupancy = totalRooms * 4; // Max 4 guests per room (adults + children)
+    const maxOccupancy = totalRooms * 4;
+    const maxAdults = totalRooms * 3;
 
-    if (totalGuests > maxOccupancy) {
-      window.alert("Maximum occupancy is exceeded. Please select the rooms again.");
+    if (totalGuests > maxOccupancy || guests.adults > maxAdults) {
+      window.alert("Maximum occupancy or adult limit exceeded. Please select more rooms.");
       return;
     }
 
@@ -63,17 +57,54 @@ const HotelBookingForm = ({ rooms, onSubmit }) => {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="flex flex-col gap-4 p-4 border rounded bg-gray-100">
-      <DateRangePicker onChange={setDates} />
-      <div className="font-medium">Nights: {nights}</div>
-      <RoomSelector
-        rooms={rooms}
-        onChange={setSelectedRooms}
-        totalAdults={guests.adults}
-      />
-      <GuestSelector onChange={setGuests} />
-      <div className="font-bold">Total Accommodation Fee: ${totalFee.toFixed(2)}</div>
-      <button type="submit" className="bg-blue-500 text-white p-2 rounded">Book Now</button>
+    <form
+      onSubmit={handleSubmit}
+      className="flex flex-col md:flex-row gap-6 p-6 bg-gray-100 rounded-lg shadow-lg form_container"
+    >
+      {/* Left column with a single range calendar */}
+      <div className="w-full md:w-1/2 flex flex-col calendar_part">
+        <div className="calendar-container border p-2 rounded bg-white flex-1">
+          <DatePicker
+            selected={dates.checkIn}
+            onChange={([start, end]) => setDates({ checkIn: start, checkOut: end })}
+            startDate={dates.checkIn}
+            endDate={dates.checkOut}
+            selectsRange
+            inline
+            minDate={new Date()}
+          />
+        </div>
+      </div>
+
+      {/* Right column with details */}
+      <div className="w-full md:w-1/2 flex flex-col gap-6 info_container">
+        <div className="stay_info">
+          <DateDisplay
+            checkIn={dates.checkIn}
+            checkOut={dates.checkOut}
+            className="flex flex-col gap-4"
+          />
+          <div className="font-medium"><span>{nights}</span><span> night{nights > 1 ? "s" : ""}</span></div>
+        </div>
+        <RoomSelector
+          rooms={rooms}
+          onChange={setSelectedRooms}
+          totalGuests={guests.adults + guests.children}
+        />
+        <GuestSelector onChange={setGuests} />
+        <div className="font-bold text-lg total_fee">
+          <span>Total Fee:</span>
+          <span>${totalFee.toFixed(2)}</span>
+        </div>
+        <div className="book_now_container">
+          <button
+            type="submit"
+            className="bg-blue-600 text-white p-3 rounded-lg hover:bg-blue-700 transition"
+          >
+            Book Now
+          </button>
+        </div>
+      </div>
     </form>
   );
 };

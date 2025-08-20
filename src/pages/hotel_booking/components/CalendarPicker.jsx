@@ -2,29 +2,27 @@ import React, { useState } from 'react';
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
 
-export const DateRangePicker = ({ onChange }) => {
-  const [checkIn, setCheckIn] = useState(null);
-  const [checkOut, setCheckOut] = useState(null);
-
+const CalendarPicker = ({ checkIn, checkOut, onChange, className }) => {
   const handleChange = (dates) => {
     const [start, end] = dates;
-    setCheckIn(start);
-    setCheckOut(end);
     onChange({ checkIn: start, checkOut: end });
   };
-
   return (
-    <div className="flex flex-col gap-2">
-      <label>Check-in / Check-out</label>
+    <div className={`calendar-container ${className || ''}`}>
       <DatePicker
+        selected={checkIn}
+        onChange={handleChange}
         selectsRange
         startDate={checkIn}
         endDate={checkOut}
-        onChange={handleChange}
         minDate={new Date()}
-        placeholderText="Select dates"
+        inline
+        monthsShown={1}
+        dateFormat="yyyy/MM/dd"
         className="border p-2 rounded"
       />
     </div>
   );
 };
+
+export default CalendarPicker 
