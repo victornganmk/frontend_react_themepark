@@ -1,4 +1,5 @@
 import * as React from "react";
+import { Link } from 'react-router-dom';
 import { CompactTable } from "@table-library/react-table-library/compact";
 import { useTheme } from "@table-library/react-table-library/theme";
 import { getTheme } from "@table-library/react-table-library/baseline";
@@ -33,15 +34,15 @@ const Job_Openings = () => {
         {
             label: "Job Title",
             renderCell: (item) => (
-            <a
-                href="#"
+            <Link
+                to="#"
                 onClick={(e) => {
                 e.preventDefault();
                 handleJobClick(item);
                 }}
             >
                 {item.job_title}
-            </a>
+            </Link>
             ),
             resize: { width: "40%" },
         },

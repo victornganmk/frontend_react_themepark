@@ -1,5 +1,6 @@
 import React, { useState, useRef } from 'react'
 import { hotel_rooms } from '../../data';
+import { Link } from 'react-router-dom';
 
 const Hotel_Rooms_Deluxe = () => {
     const room = hotel_rooms.find(room => room.id === 2);
@@ -102,7 +103,7 @@ const Hotel_Rooms_Deluxe = () => {
                             <p> {room.size_sqf} sqf | {room.size_sqm} sqm | {room.view} | {room.beds} </p>
                         </div>
                         <div className="booknow">
-                            <a href="#">book now</a>
+                            <Link to="/hotel_booking">book now</Link>
                         </div>
                     </div>
                 </article>

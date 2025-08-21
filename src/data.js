@@ -1,7 +1,7 @@
 export const hotel_rooms = [
     {
         id: 1,
-        link: "#",
+        link: "/hotel_rooms_standard",
         image: "/img/hotel_rooms/hotel_rooms_001.webp", 
         type: "standard room", 
         size_sqf: "2160", 
@@ -21,7 +21,7 @@ export const hotel_rooms = [
     },
         {
         id: 2,
-        link: "#",
+        link: "/hotel_rooms_deluxe",
         image: "/img/hotel_rooms/hotel_rooms_002.webp", 
         type: "deluxe room", 
         size_sqf: "2700", 
@@ -41,7 +41,7 @@ export const hotel_rooms = [
     },
         {
         id: 3,
-        link: "#",
+        link: "/hotel_rooms_premier",
         image: "/img/hotel_rooms/hotel_rooms_003.webp", 
         type: "premier room", 
         size_sqf: "3240", 
@@ -61,7 +61,7 @@ export const hotel_rooms = [
     },
         {
         id: 4,
-        link: "#",
+        link: "/hotel_rooms_grand",
         image: "/img/hotel_rooms/hotel_rooms_001.webp", 
         type: "grand room", 
         size_sqf: "4320", 
