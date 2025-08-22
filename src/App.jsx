@@ -14,8 +14,6 @@ import Job_Openings from './pages/job_openings/Job_Openings';
 function App() {
 
   return (
-    <BrowserRouter>
-    
       
       <Routes>
         <Route path = "/hotel_rooms" element = {<Hotel_Rooms />} />

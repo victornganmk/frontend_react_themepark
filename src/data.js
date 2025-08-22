@@ -62,7 +62,7 @@ export const hotel_rooms = [
         {
         id: 4,
         link: "/hotel_rooms_grand",
-        image: "/img/hotel_rooms/hotel_rooms_001.webp", 
+        image: "/img/hotel_rooms/hotel_rooms_004.webp", 
         type: "grand room", 
         size_sqf: "4320", 
         size_sqm: "400", 
@@ -695,4 +695,3 @@ export const job_openings = [
         benefits4: '17 days Public Holiday',
     },
 ]
-
